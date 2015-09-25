@@ -1,0 +1,22 @@
+@import '../variables.css';
+
+.SideNav {
+  width:320px;
+
+}
+.jane-credit-top-left {
+  height:150px;
+  padding:20px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color:#fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.jane-credit-top-bottom {
+  height:70px;
+  padding:20px;
+  text-align: center;
+  background-color:#fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}

@@ -1,12 +1,6 @@
 @import '../../../node_modules/normalize.css/normalize.css';
-
-/*! React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
-
 @import '../variables.css';
 
-/*
- * Base styles
- * ========================================================================== */
 
 html {
   color: #222;
@@ -14,6 +8,7 @@ html {
   font-size: 1em; /* ~16px; */
   font-family: var(--font-family-base);
   line-height: 1.375; /* ~22px */
+  background: #F0F0F0;
 }
 
 ::-moz-selection {
@@ -38,12 +33,6 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
 audio,
 canvas,
