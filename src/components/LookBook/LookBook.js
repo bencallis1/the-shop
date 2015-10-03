@@ -2,23 +2,22 @@
 
 import React, { PropTypes, Component } from 'react';
 import withStyles from '../../decorators/withStyles';
-import styles from './RegisterPage.css';
+import styles from './LookBook.css';
 
 @withStyles(styles)
-class RegisterPage extends Component {
+class LookBook extends Component {
 
   static contextTypes = {
     onSetTitle: PropTypes.func.isRequired
   };
 
   render() {
-    let title = 'New User Registration';
+    let title = 'Lookbook';
     this.context.onSetTitle(title);
     return (
-      <div className="RegisterPage">
-        <div className="RegisterPage-container">
-          <h1>{title}</h1>
-          <p>...</p>
+      <div className="LookBookPage">
+        <div className="LookBookPage-container">
+
         </div>
       </div>
     );
@@ -26,4 +25,4 @@ class RegisterPage extends Component {
 
 }
 
-export default RegisterPage;
+export default LookBook;

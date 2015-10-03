@@ -2,12 +2,28 @@
 
 import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames';
-import styles from './Navigation.css';
+import styles from './Menu.css';
 import withStyles from '../../decorators/withStyles';
 import Link from '../Link';
 
-@withStyles(styles)
-class Navigation extends Component {
+@withStyles(styles) class Menu extends Component {
+
+  getInitialState() {
+  return {
+    listVisible: false
+  };
+}
+
+  show() {
+  this.setState({ listVisible: true });
+  document.addEventListener("click", this.hide);
+}
+
+  hide() {
+  this.setState({ listVisible: false });
+  document.removeEventListener("click", this.hide);
+}
+
 
   static propTypes = {
     className: PropTypes.string
@@ -16,13 +32,20 @@ class Navigation extends Component {
   render() {
     return (
 
-      <div className={classNames(this.props.className, 'Navigation')} role="navigation">
-        <a className="Navigation-link" href="/hello" onClick={Link.handleClick}>Orders</a>
-        <a className="Navigation-link" href="/contact" onClick={Link.handleClick}>Jane Credit</a>
+      <div className={"dropdown-container" + (this.state.listVisible ? " show" : "")}>
+        <div className={"dropdown-display" + (this.state.listVisible ? " clicked": "")} onClick={this.show}>
+          <span style={{ color: this.props.selected.hex }}>{this.props.selected.name}</span>
+          <i className="fa fa-angle-down"></i>
+        </div>
+        <div className="dropdown-list">
+          <div>
+            {this.renderListItems()}
+          </div>
+        </div>
       </div>
     );
   }
 
 }
 
-export default Navigation;
+export default Menu;

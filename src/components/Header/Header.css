@@ -2,66 +2,61 @@
 
 @import '../variables.css';
 
-:root {
-  --brand-color: #61dafb;
-
-}
-
 .Header {
-  padding: 20px 0 0 60px;
   width: 100%;
-  height:50px;
-  background: white;
-
-
-
-
+  height:40px;
+  background: black;
+  box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .Header-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1340px;
-
 
 
 }
 
-.Header-brand {
-  color: color(var(--brand-color) lightness(+10%));
-  text-decoration: none;
-  font-size: 1.75em; /* ~28px */
-  height:30px;
-}
-.Header-brandImg {
-  height:40px;
-}
 .Header-brandTxt {
   margin-left: 10px;
 }
 
-.Header-nav {
+.Navigation {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  display: inline-block;
-  margin-top: 6px;
+}
+.Navigation-link-container {
+  display: flex;
+  justify-content: space-around;
+  width:600px;
+}
+.Navigation-link {
+  display: flex;
+  opacity: 0;
+  padding-left:40px ;
+  font-size: 1.125em; /* ~18px */
 }
 
-.Header-banner {
-  text-align: center;
+.open-menu {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  cursor: pointer;
+
+}
+.omnu-line {
+  height:2px;
+  width:40px;
+  margin-bottom: 5px;
+  background-color: #FFF;
 }
 
-.Header-bannerTitle {
-  margin: 0;
-  padding: 10px;
-  font-weight: normal;
-  font-size: 4em;
-  line-height: 1em;
-}
 
-.Header-bannerDesc {
-  padding: 0;
-  color: rgba(255, 255, 255, .5);
-  font-size: 1.25em;
-  margin: 0;
+.theTop {
+  height:50vh;
+  width:400px;
+  background-color: #000088;
 }

@@ -4,22 +4,29 @@ import React, { Component } from 'react';
 import styles from './Header.css';
 import withStyles from '../../decorators/withStyles';
 import Link from '../Link';
-import Navigation from '../Navigation';
+import Menu from '../Navigation'
+
 
 @withStyles(styles)
 class Header extends Component {
+
+  componentWillMount () {
+
+  }
 
   render() {
     return (
       <div className="Header">
         <div className="Header-container">
-          <a className="Header-brand" href="/" onClick={Link.handleClick}>
-            <img className="Header-brandImg" src="https://d2ilfdg091sfom.cloudfront.net/content/images/jane/jane-logo_360.png" />
-          </a>
-          <Navigation className="Header-nav" />
-          <div className="Header-banner">
+          <div className='Navigation'>
+          <span className="open-menu" >
+          <span className="omnu-line trans" ></span>
+          <span className="omnu-line trans-fast" ></span>
+          <span className="omnu-line trans" ></span>
+          </span>
           </div>
         </div>
+        <Menu />
       </div>
     );
   }

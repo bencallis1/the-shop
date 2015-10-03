@@ -1,0 +1,16 @@
+/* React Starter Kit | MIT License | http://www.reactstarterkit.com/ */
+
+@import '../variables.css';
+
+.LookBookPage {
+  display: flex;
+  width: inherit;
+  background-color: #8697A6;
+}
+.LookBookPage-container {
+  display: flex;
+  height:100vh;
+
+
+
+}

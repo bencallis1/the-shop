@@ -1,6 +1,9 @@
 @import '../../../node_modules/normalize.css/normalize.css';
 @import '../variables.css';
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 html {
   color: #222;
@@ -9,8 +12,12 @@ html {
   font-family: var(--font-family-base);
   line-height: 1.375; /* ~22px */
   background: #F0F0F0;
+  box-sizing: border-box;
 }
 
+.main-container {
+
+}
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
